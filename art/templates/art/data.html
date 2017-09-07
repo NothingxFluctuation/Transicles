@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   {% load static %}
+  <link rel="stylesheet" href="{% static 'art/main.css' %}">
+  <link rel="icon" type="image/png" href="https://3.bp.blogspot.com/-szkrocKI4Fs/WbEZJ2e4PqI/AAAAAAAAAOY/_zs0y2KagpMcmRENQo8PNINLSm6lyRQ-gCLcBGAs/s1600/favicon.png">
+  <title>Search -- TRANSICLES</title>
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <style>
+      body {
+	background: #fafafa url(http://jackrugile.com/images/misc/noise-diagonal.png);
+	color: #444;
+	font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
+	text-shadow: 0 1px 0 #fff;
+}
+
+strong {
+	font-weight: bold; 
+}
+
+em {
+	font-style: italic; 
+}
+
+table {
+	background: #f5f5f5;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 30px auto;
+	text-align: left;
+	width: 800px;
+}	
+
+th {
+	background: url(http://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+	border-left: 1px solid #555;
+	border-right: 1px solid #777;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #333;
+	box-shadow: inset 0 1px 0 #999;
+	color: #fff;
+  font-weight: bold;
+	padding: 10px 15px;
+	position: relative;
+	text-shadow: 0 1px 0 #000;	
+}
+
+th:after {
+	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+	content: '';
+	display: block;
+	height: 25%;
+	left: 0;
+	margin: 1px 0 0 0;
+	position: absolute;
+	top: 25%;
+	width: 100%;
+}
+
+th:first-child {
+	border-left: 1px solid #777;	
+	box-shadow: inset 1px 1px 0 #999;
+}
+
+th:last-child {
+	box-shadow: inset -1px 1px 0 #999;
+}
+
+td {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}
+
+td:first-child {
+	box-shadow: inset 1px 0 0 #fff;
+}	
+
+td:last-child {
+	border-right: 1px solid #e8e8e8;
+	box-shadow: inset -1px 0 0 #fff;
+}	
+
+tr {
+	background: url(http://jackrugile.com/images/misc/noise-diagonal.png);	
+}
+
+tr:nth-child(odd) td {
+	background: #f1f1f1 url(http://jackrugile.com/images/misc/noise-diagonal.png);	
+}
+
+tr:last-of-type td {
+	box-shadow: inset 0 -1px 0 #fff; 
+}
+
+tr:last-of-type td:first-child {
+	box-shadow: inset 1px -1px 0 #fff;
+}	
+
+tr:last-of-type td:last-child {
+	box-shadow: inset -1px -1px 0 #fff;
+}	
+
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+
+<body>
+<!-- Start of header -->
+<img src="https://2.bp.blogspot.com/-CYQ5w56tlPg/WbEZmyEpl5I/AAAAAAAAAOg/IaGwmW3BBGM5R5fg81XlolD8i_2M6UwCLcBGAs/s1600/transicles-logo.png" id="transicles-logo" alt="TRANSICLES Logo">
+<br/>
+<ul class="nav">
+  <li class="nav-items"><a href="/art/" class="nav-links">Top</a></li>
+  <li class="nav-items"><a href="/art/" class="nav-links">Tech</a></li>
+  <li class="nav-items"><a href="/art/" class="nav-links">Science</a></li>
+  <li class="nav-items"><a href="/art/" class="nav-links">Featured</a></li>
+  <li class="nav-items"><a href="/art/newsletter/" class="nav-links">Newsletter</a></li>
+  <li class="nav-items"><a href="/art/search/" class="nav-links">Search</a></li>
+</ul>
+<br/>
+<!-- End of header -->
+
+<body>
+  <table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Status</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Domain Name</strong></td>
+      <td>OK</td>
+      <td>{{data_list.domain}}</td>
+    </tr>
+	<tr>
+      <td><strong>Registrar</strong></td>
+      <td>OK</td>
+      <td>{{data_list.registrar}}</td>
+    </tr>
+	<tr>
+      <td><strong>Referral Url</strong></td>
+      <td>OK</td>
+      <td>{{data_list.referral_url}}</td>
+    </tr>
+    <tr>
+      <td><strong>DNS Security EXT</strong></td>
+      <td>OK</td>
+      <td>{{data_list.dnssec}}</td>
+    </tr>
+	<tr>
+      <td><strong>Name Servers</strong></td>
+      <td>OK</td>
+      <td>{{data_list.name_servers}}</td>
+    </tr>
+    <tr>
+      <td><strong>Creation Date</strong></td>
+      <td>OK</td>
+	  <td>{{data_list.creation_date}}</td>
+    </tr>
+    <tr>
+      <td><strong>Updated Date</strong></td>
+      <td>OK</td>
+      <td>{{data_list.updated_date}}</td>
+    </tr>					
+    <tr>
+      <td><strong>Expire Date</strong></td>
+      <td>OK</td>
+      <td>{{data_list.expiration_date}}</td>
+    </tr>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td>OK</td>
+      <td>{{data_list.status}}</td>
+    </tr>
+    <tr>
+      <td><strong>Organization</strong></td>
+      <td>OK</td>
+      <td>{{data_list.org}}</td>
+    </tr>
+    <tr>
+      <td><strong>Admin Name</strong></td>
+      <td> OK</td>
+      <td>{{data_list.name}}</td>
+    </tr>
+    <tr>
+      <td><strong>Admin Organization</strong></td>
+      <td>OK</td>
+      <td>{{data_list.org}}</td>
+    </tr>
+	 <tr>
+      <td><strong>Admin Country</strong></td>
+      <td>OK</td>
+      <td>{{data_list.country}}</td>
+    </tr>
+	 <tr>
+      <td><strong>Admin State/Province</strong></td>
+      <td>OK</td>
+      <td>{{data_list.state}}</td>
+    </tr>
+	 <tr>
+      <td><strong>Admin City</strong></td>
+      <td>OK</td>
+      <td>{{data_list.city}}</td>
+    </tr>
+	 <tr>
+      <td><strong>Admin Street</strong></td>
+      <td>OK</td>
+      <td>{{data_list.address}}</td>
+    </tr>
+	<tr>
+      <td><strong>Admin Postal Code</strong></td>
+      <td>OK</td>
+      <td>{{data_list.zipcode}}</td>
+    </tr>
+	<tr>
+      <td><strong>Contact Emails</strong></td>
+      <td>OK</td>
+      <td>{{data_list.emails}}</td>
+    </tr>
+  </tbody>
+</table>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+<br>
+<br>
+<div class="footer">
+  <ul>
+    <li class="footer-items"><a href="/art/about/" class="footer-links">About us</a></li>
+    <li class="footer-items"><a href="/art/privacy/" class="footer-links">Privacy policy</a></li>
+    <li class="footer-items"><a href="/art/terms/" class="footer-links">Terms of use</a></li>
+    <li class="footer-items"><a href="/art/newsletter/" class="footer-links">Subscribe for newsletter</a></li>
+    <li class="footer-items"><a href="/art/contact/" class="footer-links">Contact us</a></li>
+    <li class="footer-items">Like us on : <div class="social-links"><a href="#"><img src="https://2.bp.blogspot.com/-Y2w_ewZmlvg/WbEZJ7NnLUI/AAAAAAAAAOc/9TIp1eaJSPwulWoB3-Wnu7EqG3zdMZHzQCLcBGAs/s1600/facebook.png" id="facebook-icon"></a></div></li>
+  </ul>
+    <h3 id="footer-copyrights">&copy; 2017 TRANSICLES. All rights reserved.</h3>
+</div>
+<!-- End of footer -->
+
+</body>
+</html>

@@ -6,7 +6,9 @@ urlpatterns=[
     url(r'^contact/$',views.contact,name='contact'),
     url(r'^newsletter/$',views.newsletter,name='newsletter'),
     url(r'^privacy/$',views.privacy,name='privacy'),
-	url(r'^search/$',views.search,name='search'),
-	url(r'^terms/$',views.terms, name='terms'),
+    url(r'^search/$',views.search,name='search'),
+    url(r'^terms/$',views.terms, name='terms'),
+    url(r'^data/$',views.data, name='data'),
+    url(r'^shaka/$',views.shaka,name='shaka'),
 	
 ]
